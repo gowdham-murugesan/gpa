@@ -441,6 +441,11 @@ th, td {
 
   <script>
 
+    function myCGPA() {
+      var gpa = document.getElementById("gpa1").innerHTML;
+      window.location.href = "/cgpa.html?sem2=" + gpa;
+    }
+
     function myFunction() {
       var eng = document.getElementById("eng").value;
       var mat = document.getElementById("mat").value;
