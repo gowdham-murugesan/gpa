@@ -349,6 +349,7 @@ th, td {
     <h2 id="gpa" style="text-align: center;"></h2><p id="ra" style="margin-top: -18px; text-align: center;"></p><br>
 
     <div style="display: none;" id="table">
+        <input type="button" value="Wanna Calculate CGPA?" name="CGPA" id="cgpa" onclick="myCGPA(); return false;"/><br><br>
       <table>
         <tr>
           <th>SUJECT CODE</th>
@@ -440,6 +441,11 @@ th, td {
 </div>
 
   <script>
+
+    function myCGPA() {
+      var gpa = document.getElementById("gpa1").innerHTML;
+      window.location.href = "/cgpa.html?sem2=" + gpa;
+    }
 
     function myFunction() {
       var eng = document.getElementById("eng").value;
