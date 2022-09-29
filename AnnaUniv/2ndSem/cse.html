@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2nd Sem GPA Calculator</title>
+	<noscript><h3> You must have JavaScript enabled in order to use this order form. Please 
+      enable JavaScript and then reload this page in order to continue. </h3> 
+      <meta HTTP-EQUIV="refresh" content=0;url="javascriptNotEnabled.php"></noscript>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+
+body {
+  margin: 0;
+}
+
+.form-style-10{
+	width:450px;
+	padding:30px;
+	margin:40px auto;
+	background: #FFF;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+}
+
+@media only screen and (max-width: 600px) {
+  .form-style-10 {
+    width: 300px;
+    margin:  32px auto;
+  }
+
+  table {
+  display: block;
+}
+}
+
+.form-style-10 .inner-wrap{
+	padding: 30px;
+	background: #F8F8F8;
+	border-radius: 6px;
+	margin-bottom: 15px;
+}
+.form-style-10 h1{
+	text-align: center;
+	background: #2A88AD;
+	padding: 20px 0px 15px 0px;
+	margin: -30px -30px 30px -30px;
+	border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+}
+.form-style-10 h1 > span{
+	display: block;
+	margin-top: 2px;
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-10 label{
+	display: block;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #888;
+	margin-bottom: 15px;
+}
+.form-style-10 input[type="text"],
+.form-style-10 input[type="date"],
+.form-style-10 input[type="datetime"],
+.form-style-10 input[type="email"],
+.form-style-10 input[type="number"],
+.form-style-10 input[type="search"],
+.form-style-10 input[type="time"],
+.form-style-10 input[type="url"],
+.form-style-10 input[type="password"],
+.form-style-10 textarea,
+.form-style-10 select {
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 8px;
+	border-radius: 6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	/* border: 2px solid #fff; */
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.form-style-10 .section{
+	font: normal 20px 'Bitter', serif;
+	color: #2A88AD;
+	margin-bottom: 5px;
+}
+.form-style-10 .section span {
+	background: #2A88AD;
+	padding: 5px 10px 5px 10px;
+	position: absolute;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 4px solid #fff;
+	font-size: 14px;
+	margin-left: -45px;
+	color: #fff;
+	margin-top: -3px;
+}
+.form-style-10 input[type="button"], 
+.form-style-10 input[type="submit"]{
+	background: #2A88AD;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	font: normal 30px 'Bitter', serif;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	border: 1px solid #257C9E;
+	font-size: 15px;
+}
+.form-style-10 input[type="button"]:hover, 
+.form-style-10 input[type="submit"]:hover{
+	background: #2A6881;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+.form-style-10 .privacy-policy{
+	float: right;
+	width: 250px;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #4D4D4D;
+	margin-top: 10px;
+	text-align: right;
+}
+
+#standard12a, #standard12, #reloadbtn {
+	display: none;
+}
+
+.enter {
+  font-size: 10px;
+}
+
+input[type="number"] {
+  border: 0.125em solid hsl(0, 0%, 100%);
+  outline: none;
+}
+
+input:placeholder-shown {
+  border-color: rgb(255, 255, 255);
+}
+/* Show red borders when filled, but invalid */
+input:not(:placeholder-shown) {
+  border-color: hsl(0, 76%, 50%);
+}
+
+/* Show green borders when valid */
+input:valid {
+  border-color: hsl(120, 76%, 50%);
+}
+
+input:disabled {
+  border-color: hsl(0, 0%, 100%);
+}
+
+.footer {
+    text-align: center;
+    width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: gray;
+  color: white;
+  padding: 8px;
+  }
+
+  .fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .fa-envelope {
+    background: #dd4b39;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  table, td, th {  
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+  overflow-x:scroll;
+}
+
+th, td {
+  padding: 8px;
+}
+</style>
+	<script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+</script>
+</head>
+<body>
+
+<div class="form-style-10">
+<h1>GPA Calculator<br><span>Anna University (R2021)</span></h1>
+<form onsubmit="myFunction();  return false;" id="form12">
+    <div class="section" id="standard10a"><span>2</span>2nd Semester (CSE)<br><div class="enter">(Select the grade you get in each subject)</div></div>
+    <div class="inner-wrap" id="standard10">
+        <label for="eng">Professional English - II (HS3251) : </label>
+        <select id="eng" name="eng" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="mat">Statistics and Numerical Methods (MA3251) : </label>
+        <select id="mat" name="mat" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="phy">Physics for Information Science (PH3256) : </label>
+        <select id="phy" name="phy" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="cy">Basic Electrical and Electronics Engineering (BE3251) : </label>
+        <select id="cy" name="cy" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="pyt">Engineering Graphics (GE3251) : </label>
+        <select id="pyt" name="pyt" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="eg">Programming in C (CS3251) : </label>
+        <select id="eg" name="eg" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+
+        <label for="pytl">Engineering Practices Laboratory (GE3271) : </label>
+        <select id="pytl" name="pytl" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+        
+        <label for="pcl">Programming in C Laboratory (CS3271) : </label>
+        <select id="pcl" name="pcl" required>
+          <option value="10">O</option>
+          <option value="9">A+</option>
+          <option value="8">A</option>
+          <option value="7">B+</option>
+          <option value="6">B</option>
+          <option value="5">C</option>
+          <option value="0">RA</option>
+        </select><br>
+    </div>
+    
+    <div class="button-section" id="submitbtn">
+     <input type="submit" value="Calculate GPA!" name="Sign Up" />
+    </div>
+
+    <h2 id="gpa" style="text-align: center;"></h2><p id="ra" style="margin-top: -18px; text-align: center;"></p><br>
+
+    <div style="display: none;" id="table">
+      <input type="button" value="Wanna Calculate CGPA?" name="CGPA" id="cgpa" onclick="myCGPA(); return false;"/><br><br>
+      <table>
+        <tr>
+          <th>SUJECT CODE</th>
+          <th>CREDITS</th>
+          <th>GRADE</th>
+          <th>GRADE POINTS</th>
+          <th>GRADE POINTS EARNED</th>
+        </tr>
+        <tr>
+          <td>HS3251</td>
+          <td>4</td>
+          <td id="eng1"></td>
+          <td id="eng2"></td>
+          <td id="eng3"></td>
+        </tr>
+        <tr>
+          <td>MA3251</td>
+          <td>4</td>
+          <td id="mat1"></td>
+          <td id="mat2"></td>
+          <td id="mat3"></td>
+        </tr>
+        <tr>
+          <td>PH3256</td>
+          <td>3</td>
+          <td id="phy1"></td>
+          <td id="phy2"></td>
+          <td id="phy3"></td>
+        </tr>
+        <tr>
+          <td>BE3251</td>
+          <td>3</td>
+          <td id="cy1"></td>
+          <td id="cy2"></td>
+          <td id="cy3"></td>
+        </tr>
+        <tr>
+          <td>GE3251</td>
+          <td>4</td>
+          <td id="pyt1"></td>
+          <td id="pyt2"></td>
+          <td id="pyt3"></td>
+        </tr>
+        <tr>
+          <td>CS3251</td>
+          <td>3</td>
+          <td id="eg1"></td>
+          <td id="eg2"></td>
+          <td id="eg3"></td>
+        </tr>
+        <tr>
+          <td>GE3271</td>
+          <td>2</td>
+          <td id="pytl1"></td>
+          <td id="pytl2"></td>
+          <td id="pytl3"></td>
+        </tr>
+        <tr>
+          <td>CS3271</td>
+          <td>2</td>
+          <td id="pcl1"></td>
+          <td id="pcl2"></td>
+          <td id="pcl3"></td>
+        </tr>
+        <tr>
+          <td style="border: solid 1px #FFF !important;"></td>
+          <td><b>25</b></td>
+          <td style="border: solid 1px #FFF !important;"></td>
+          <td style="border: solid 1px #FFF !important;"></td>
+          <td><b id="cpe"></b></td>
+        </tr>
+      </table>
+  
+      <div style="text-align: center;">
+        <h3>GPA = (<span id="cpe1"></span>) &divide; (25)<br>= <span id="gpa1"></span></h3>
+      </div>
+        
+  
+    </div>
+    
+</form>
+
+    <p style="text-align:center; margin-top: 30px;">This site was created by <a href="https://gowdham.herokuapp.com/" target="_blank">Gowdham M</a></p>
+	  <p style="text-align:center;">email : gowdhammurugesh24@gmail.com</p>
+</div>
+
+<div class="footer" id="footer">
+  <span><span style="font-size: 12px;">Powered by</span> <a href="https://gowdham.herokuapp.com/" target="_blank" style="color: white">Gowdham M</a> | Reach me at <a href="mailto:gowdhammurugesh24@gmail.com" target="_blank" class="fa fa-envelope"></a> <a href="https://www.linkedin.com/in/gowdham-murugesan/" target="_blank" class="fa fa-linkedin"></a> <a href="fb://profile/100008861406990" target="_blank" class="fa fa-facebook" id="phonescreen"></a> <a href="https://www.facebook.com/gowdhammurugesh24/" target="_blank" class="fa fa-facebook" id="laptopscreen"></a></span>
+</div>
+
+  <script>
+
+    function myCGPA() {
+      var gpa = document.getElementById("gpa1").innerHTML;
+      window.location.href = "/cgpa.html?sem2=" + gpa;
+    }
+
+    function myFunction() {
+      var eng = document.getElementById("eng").value;
+      var mat = document.getElementById("mat").value;
+      var phy = document.getElementById("phy").value;
+      var cy = document.getElementById("cy").value;
+      var pyt = document.getElementById("pyt").value;
+      var eg = document.getElementById("eg").value;
+      var pytl = document.getElementById("pytl").value;
+      var pcl = document.getElementById("pcl").value;
+
+      var gpa = gpa = (eng * 4) + (mat * 4) + (phy * 3) + (cy * 3) + (pyt * 4) + (eg * 3) + (pytl * 2) + (pcl * 2);
+      var gpa1 = gpa / 25;
+
+      document.getElementById("table").style.display = "block";
+
+      if (eng==0||mat==0||phy==0||cy==0||pyt==0||eg==0||pytl==0||pcl==0) {
+        document.getElementById("gpa").innerHTML = "GPA = " + gpa1.toFixed(2);
+        document.getElementById("ra").innerHTML = "(Calculated based on the only subjects cleared)";
+      } 
+      else {
+        document.getElementById("gpa").innerHTML = "GPA = " + gpa1.toFixed(2);
+        document.getElementById("ra").innerHTML = "";
+      }
+
+      document.getElementById("eng1").innerHTML = document.getElementById("eng").options[document.getElementById("eng").selectedIndex].text;
+      document.getElementById("mat1").innerHTML = document.getElementById("mat").options[document.getElementById("mat").selectedIndex].text;
+      document.getElementById("phy1").innerHTML = document.getElementById("phy").options[document.getElementById("phy").selectedIndex].text;
+      document.getElementById("cy1").innerHTML = document.getElementById("cy").options[document.getElementById("cy").selectedIndex].text;
+      document.getElementById("pyt1").innerHTML = document.getElementById("pyt").options[document.getElementById("pyt").selectedIndex].text;
+      document.getElementById("eg1").innerHTML = document.getElementById("eg").options[document.getElementById("eg").selectedIndex].text;
+      document.getElementById("pytl1").innerHTML = document.getElementById("pytl").options[document.getElementById("pytl").selectedIndex].text;
+      document.getElementById("pcl1").innerHTML = document.getElementById("pcl").options[document.getElementById("pcl").selectedIndex].text;
+
+      document.getElementById("eng2").innerHTML = eng;
+      document.getElementById("mat2").innerHTML = mat;
+      document.getElementById("phy2").innerHTML = phy;
+      document.getElementById("cy2").innerHTML = cy;
+      document.getElementById("pyt2").innerHTML = pyt;
+      document.getElementById("eg2").innerHTML = eg;
+      document.getElementById("pytl2").innerHTML = pytl;
+      document.getElementById("pcl2").innerHTML = pcl;
+
+      var eng1 = eng * 4;
+      var mat1 = mat * 4;
+      var phy1 = phy * 3;
+      var cy1 = cy * 3;
+      var pyt1 = pyt * 4;
+      var eg1 = eg * 3;
+      var pytl1 = pytl * 2;
+      var pcl1 = pcl * 2;
+
+      document.getElementById("eng3").innerHTML = eng1;
+      document.getElementById("mat3").innerHTML = mat1;
+      document.getElementById("phy3").innerHTML = phy1;
+      document.getElementById("cy3").innerHTML = cy1;
+      document.getElementById("pyt3").innerHTML = pyt1;
+      document.getElementById("eg3").innerHTML = eg1;
+      document.getElementById("pytl3").innerHTML = pytl1;
+      document.getElementById("pcl3").innerHTML = pcl1;
+
+      document.getElementById("cpe").innerHTML = gpa;
+      document.getElementById("cpe1").innerHTML = gpa;
+      document.getElementById("gpa1").innerHTML = gpa1.toFixed(2);
+
+    }
+    if(screen.width < 600) {
+      document.getElementById("laptopscreen").style.display = "none";
+    }
+    else {
+      document.getElementById("phonescreen").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
